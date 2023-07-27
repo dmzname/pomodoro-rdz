@@ -12,6 +12,7 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
+    "plugin:i18next/recommended",
     "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
@@ -31,6 +32,7 @@
     "react",
     "prettier",
     "@typescript-eslint",
+    "i18next",
     "react-hooks"
   ],
   "rules": {
@@ -41,6 +43,12 @@
     "@typescript-eslint/no-unused-vars": "warn",
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
+    "i18next/no-literal-string": [
+      "error",
+      {
+        "markupOnly": true
+      }
+    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error"
   }
