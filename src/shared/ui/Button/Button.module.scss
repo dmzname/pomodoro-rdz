@@ -1,3 +1,28 @@
 .root {
+    padding: 20px 50px;
+
+    font-weight: 500;
+    letter-spacing: 0.1em;
+
+    border: none;
+    outline: none;
+
+    background-color: var(--bg-btn);
+
+    color: var(--text-color-btn);
+    cursor: pointer;
+}
+
+.clear {
+    padding: 0;
+
     background-color: transparent;
+    color: var(--text-color-secondary);
+}
+
+.outline {
+    border: 2px solid var(--text-color-secondary);
+
+    background-color: transparent;
+    color: var(--text-color-secondary);
 }

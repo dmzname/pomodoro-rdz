@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 const meta = {
     title: 'shared/Button',
@@ -15,5 +15,19 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
     args: {
         children: 'CLICK',
+    },
+};
+
+export const Clear: Story = {
+    args: {
+        children: 'CLICK',
+        theme: ButtonTheme.CLEAR,
+    },
+};
+
+export const Outline: Story = {
+    args: {
+        children: 'CLICK',
+        theme: ButtonTheme.OUTLINE,
     },
 };

@@ -1,0 +1,36 @@
+name: Linting, testing, building
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install modules
+        run: npm install
+      - name: Build prod project
+        run: npm run build:prod
+        if: always()
+      - name: Linting TypeScript
+        run: npm run lint:ts
+        if: always()
+      - name: Unit testing
+        run: npm run test:unit
+        if: always()
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          exitZeroOnChanges: false
+          onlyChanged: true
+          buildScriptName: storybook:build
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

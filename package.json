@@ -12,6 +12,7 @@
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
+    "test:ui": "cross-env npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN -b storybook:build",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook"
   },
@@ -58,6 +59,7 @@
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
     "babel-jest": "^29.6.2",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.9.0",
