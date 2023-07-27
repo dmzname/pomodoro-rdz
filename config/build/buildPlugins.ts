@@ -21,8 +21,9 @@ export function buildPlugins({ paths, isDev }: IBuildOptions): webpack.WebpackPl
 
         isDev && new ReactRefreshWebpackPlugin({ overlay: false }),
         isDev && new webpack.HotModuleReplacementPlugin(),
-        isDev && new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-        }),
+        isDev &&
+            new BundleAnalyzerPlugin({
+                openAnalyzer: false,
+            }),
     ].filter(Boolean);
 }
