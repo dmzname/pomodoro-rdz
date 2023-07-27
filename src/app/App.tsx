@@ -1,15 +1,11 @@
-import ReactIcon from '../shared/assets/images/React-icon.svg';
-import { useTranslation } from 'react-i18next';
-import { LangSwitcher } from 'shared/ui/LangSwitcher';
+import { Suspense } from 'react';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './providers/router/router';
 
 export const App = () => {
-    const { t } = useTranslation();
     return (
-        <>
-            <ReactIcon />
-            <p>{t('REACT APP!')}</p>
-            <p>{t('Тестовый перевод')}</p>
-            <LangSwitcher />
-        </>
+        <Suspense fallback=''>
+            <RouterProvider router={router} />
+        </Suspense>
     );
 };

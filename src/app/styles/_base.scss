@@ -1,12 +1,11 @@
 body {
     min-width: 320px;
-    min-height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font: var(--font-m);
 
     background-color: var(--bg-main);
-    color: var(--text-color);
+}
+
+button {
+    font-family: var(--font-family-main);
 }
