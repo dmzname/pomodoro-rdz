@@ -1,0 +1,38 @@
+@import "app/styles/functions";
+
+.root {
+    padding: 15px 80px;
+    display: flex;
+    align-items: center;
+
+    background-color: var(--bg-header);
+
+    @media (width >= 1440px) {
+        padding: vw(15) vw(80);
+    }
+}
+
+.logo {
+    margin-right: auto;
+    display: inline-flex;
+    align-items: center;
+
+    font-size: var(--font-size-l);
+    font-weight: var(--fw-light);
+
+    svg {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+    }
+
+    @media (width >= 1440px) {
+        font-size: vw(24);
+
+        svg {
+            width: vw(40);
+            height: vw(40);
+            margin-right: vw(12);
+        }
+    }
+}

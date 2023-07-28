@@ -1,11 +1,7 @@
-.root {
-    color: var(--text-color);
-}
-
 .primary {
-    color: #000;
+    color: var(--link-color-primary);
 }
 
 .red {
-    color: red;
+    color: var(--link-color-red);
 }

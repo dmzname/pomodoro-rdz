@@ -1,12 +1,16 @@
 .btn {
     padding: 5px 10px;
 
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: 5px;
 
-    color: var(--text-secondary);
+    color: var(--text-color-btn);
+
+    &:not(:last-child) {
+        margin-right: 5px;
+    }
 }
 
 .active {
-    border-color: var(--text-secondary);
+    border-color: var(--bg-main);
 }

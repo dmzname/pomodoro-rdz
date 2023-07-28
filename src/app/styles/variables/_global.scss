@@ -1,14 +1,23 @@
+@import "app/styles/functions";
+
 :root {
     // Colors
     --bg-main: #e5e5e5;
     --bg-btn: #a8b64f;
+    --bg-header: #fff;
     --text-color: #000;
     --text-color-btn: #fff;
     --text-color-secondary: #666;
-    
+    --link-color: #999;
+    --link-color-red: #DC3E22;
+
     // Fonts
     --font-family-main: 'SF UI Display', sans-serif;
     --font-size-m: 16px;
     --font-line-m: 24px;
     --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+    --font-size-l: 24px;
+    --font-line-l: 32px;
+    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+    --fw-light: 100;
 }

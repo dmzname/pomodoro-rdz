@@ -1,9 +1,18 @@
+@import 'functions';
+
 body {
+    margin: auto;
     min-width: 320px;
+    max-width: 1440px;
 
     font: var(--font-m);
 
     background-color: var(--bg-main);
+
+    @media (width >= 1440px) {
+        max-width: none;
+        width: vw(1440);
+    }
 }
 
 button {
