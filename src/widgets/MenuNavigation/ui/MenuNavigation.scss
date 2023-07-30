@@ -1,0 +1,10 @@
+@import 'app/styles/functions';
+
+.menu-navigation {
+    &.is-opened {
+        opacity: 1;
+
+        transform: scaleY(1);
+        pointer-events: auto;
+    }
+}

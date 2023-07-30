@@ -1,14 +1,19 @@
 @import "app/styles/functions";
+@import "app/styles/variables/global";
 
 .root {
-    padding: 15px 80px;
+    position: relative;
+
+    padding: 0 80px;
+    height: var(--header-height);
     display: flex;
     align-items: center;
 
     background-color: var(--bg-header);
 
     @media (width >= 1440px) {
-        padding: vw(15) vw(80);
+        padding: 0 vw(80);
+        height: vw($header-height);
     }
 }
 
@@ -27,7 +32,7 @@
     }
 
     @media (width >= 1440px) {
-        font-size: vw(24);
+        font-size: vw($font-size-l);
 
         svg {
             width: vw(40);

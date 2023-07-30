@@ -1,0 +1,115 @@
+@import 'app/styles/functions';
+
+.menu-dropdown {
+    top: calc(100% + 5px);
+    right: 10px;
+    z-index: 10;
+
+    padding: 30px 20px;
+    width: 300px;
+
+    border-radius: 10px;
+
+    background-color: var(--bg-header);
+    opacity: 0;
+
+    transform: scaleY(0);
+    transition-property: opacity, transform;
+    transition-timing-function: ease;
+    transition-duration: .3s;
+    transform-origin: top;
+
+    pointer-events: none;
+
+    &.is-opened {
+        opacity: 1;
+
+        transform: scaleY(1);
+        pointer-events: auto;
+    }
+
+    @media (width >= 1440px) {
+        top: calc(100% + vw(5));
+        right: vw(10);
+
+        padding: vw(30) vw(20);
+        width: vw(300);
+
+        border-radius: vw(10);
+    }
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 0 15px;
+
+    font-size: var(--font-size-m);
+    font-weight: var(--fw-light);
+    letter-spacing: .05em;
+
+    color: var(--main-text-color);
+
+    svg {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+
+        fill: var(--main-text-color);
+    }
+
+    &:nth-child(2) {
+        svg {
+            width: 17px;
+            height: 17px;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+
+        border-bottom: 1px solid var(--bg-main);
+    }
+
+    @media (width >= 1440px) {
+        padding: vw(10) 0 vw(15);
+
+        font-size: vw($font-size-m);
+
+        svg {
+            margin-right: vw(10);
+            width: vw(20);
+            height: vw(20);
+        }
+
+        &:nth-child(2),
+        &:last-child {
+            svg {
+                width: vw(17);
+                height: vw(17);
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: vw(10);
+
+            border-bottom: vw(1) solid var(--bg-main);
+        }
+    }
+}
+
+button.link {
+    font: var(--font-m);
+    font-weight: var(--fw-light);
+
+    color: var(--main-text-color);
+
+    @media (width >= 1440px) {
+        font-size: vw($font-size-m);
+    }
+}

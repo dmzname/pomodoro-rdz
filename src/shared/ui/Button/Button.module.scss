@@ -9,7 +9,7 @@
 
     background-color: var(--bg-btn);
 
-    color: var(--text-color-btn);
+    color: var(--btn-text-color);
     cursor: pointer;
 }
 
@@ -17,12 +17,12 @@
     padding: 0;
 
     background-color: transparent;
-    color: var(--text-color-secondary);
+    color: var(--btn-text-color-secondary);
 }
 
 .outline {
-    border: 2px solid var(--text-color-secondary);
+    border: 2px solid var(--btn-text-color-secondary);
 
     background-color: transparent;
-    color: var(--text-color-secondary);
+    color: var(--btn-text-color-secondary);
 }

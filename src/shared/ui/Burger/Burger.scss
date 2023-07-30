@@ -1,0 +1,14 @@
+.burger {
+    &.is-opened {
+        transform: rotate(45deg);
+
+        span {
+            &:nth-child(1),
+            &:nth-child(3),
+            &:nth-child(7),
+            &:nth-child(9), {
+                opacity: 0;
+            }
+        }
+    }
+}

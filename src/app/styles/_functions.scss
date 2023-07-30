@@ -1,5 +1,5 @@
-$full-width: 1440;
+@import 'variables/global';
 
-@function vw($pixels, $context: $full-width) {
+@function vw($pixels, $context: $max-app-width) {
     @return #{calc($pixels / $context) * 100}vw;
 }

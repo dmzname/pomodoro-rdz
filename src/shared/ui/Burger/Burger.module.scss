@@ -18,22 +18,9 @@
 
         border-radius: 100%;
 
-        background: var(--link-color-red);
+        background: var(--link-text-color-red);
 
         transition: opacity .2s ease;
-    }
-
-    &.is-opened {
-        transform: rotate(45deg);
-
-        span {
-            &:nth-child(1),
-            &:nth-child(3),
-            &:nth-child(7),
-            &:nth-child(9), {
-                opacity: 0;
-            }
-        }
     }
 
     @media (width >= 1440px) {
