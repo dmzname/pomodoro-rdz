@@ -15,7 +15,8 @@
     "test:ui": "cross-env npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN -b storybook:build",
     "test:ui:ok": "cross-env npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN --auto-accept-changes -b storybook:build",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "storybook:build": "storybook build -c ./config/storybook"
+    "storybook:build": "storybook build -c ./config/storybook",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -91,7 +92,8 @@
     "webpack": "^5.88.2",
     "webpack-bundle-analyzer": "^4.9.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "i18next": "^23.3.0",
